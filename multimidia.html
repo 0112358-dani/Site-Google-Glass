@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>projetoglass-html</title>
+  <link rel="stylesheet" href="formatgoogle.css">
+  <link rel="stylesheet" href="media.css">
+
+
+</head>
+
+<body>
+  <script src="funcoescursohtml.js">
+    function mudaFoto(foto) {
+      document.getElementById("icone").src = foto
+    }
+
+  </script>
+  <div id="interface">
+    <!--cria uma divisão no site, ex: interface, meio do site, final etc-->
+    <header id="cabecalho">
+      <!--um novo headER, com id para identificar o cabeçalho do site-->
+      <hgroup>
+        <!-- hgroup foi descontinuada do html atual, usasse header no lugar-->
+        <h1>Google Glass</h1>
+        <h2> Revolução do Google está chegando</h2>
+      </hgroup>
+
+      <img id="icone" src="_imagens/multimidia.png">
+      <!--src é o local onde a imagem esta-->
+      <nav id="menu">
+        <ul type="disc"> >
+          <!-- se for ol : se desejar começar por uma numeração X, é só colocar o start="X", obs: o "start" só pode ser numerico, por exemplo se eu quiser iniciar da letra c, coloco start="3" (de 3° letra)-->
+          <h1>Menu Principal</h1>
+          <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/multimidia.png')">
+            <a href="index.html">Home</a></li>
+          <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+              href="index.html"><a href="specs.html">Especificações</a></li>
+          <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+              href="index.html"><a href="fotos.html">Fotos</a></li>
+          <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+              href="index.html"><a href="multimidia.html">Multimídia</a></li>
+          <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/multimidia.png')"><a
+              href="index.html"><a href="fale-conosco.html">Fale conosco</a></li>
+          <!--cada l1 corresponde a um item da lista-->
+        </ul>
+        <!--se fosse ol: td oq estiver dentro das tags ol faz parte de uma lista ordenada-->
+      </nav>
+      <!--tudo oq estiver dentro da tag nav será relacionado a navegação do site-->
+
+    </header>
+
+    <section id="corpo-full">
+      <article id="noticia-principal">
+        <!--article so pode ser feito dentro de uma section e uma section pode ter varios articles-->
+        <header id="cabecalho-artigo">
+          <hgroup>
+            <h3>Glass > Multimídia</h3>
+            <h1>Sons e Vídeos</h1>
+            <h2>por Gustavo Guanabara</h2>
+            <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+          </hgroup>
+        </header>
+
+
+      </article>
+    </section>
+
+    <div id="tv-radio">
+      <audio id="musica" controls="controls">
+        <source src="_media/_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+        Sorry, your browser not supported this audio. 
+
+      </audio>
+      <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg"> <!-- a tag poster coloca uma thumb no video-->
+        <source src="_media/_media/getting-started.mp4" type="video/mp4">
+          <source src="" type="videowebm">
+            Sorry, your browser not supported this video. <!--o html é intuitivo, se não carregar as info de audio e video ele exibe a msg de erro automaticamente.-->
+      </video>
+    </div>
+
+    <footer id="rodape">
+      <p>Copyright &copy; 2021 - by Daniele Marques</p>
+      <p> <a href="http://facebook.com/dani.marques.18" target="blank">Facebook</a> | Twitter</p>
+    </footer>
+  </div>
+</body>
+
+</html>
